@@ -24,7 +24,7 @@
  *
  * @return Uso de memoria como porcentaje (0.0 a 100.0), o -1.0 en caso de error.
  */
-double get_memory_usage();
+double get_memory_usage(void);
 
 /**
  * @brief Obtiene el porcentaje de uso de CPU desde /proc/stat.
@@ -34,7 +34,7 @@ double get_memory_usage();
  *
  * @return Uso de CPU como porcentaje (0.0 a 100.0), o -1.0 en caso de error.
  */
-double get_cpu_usage();
+double get_cpu_usage(void);
 
 /**
  * @brief Obtiene el número de bytes leídos desde disco desde /proc/diskstats.
@@ -44,7 +44,7 @@ double get_cpu_usage();
  *
  * @return Número de bytes leídos, o -1 en caso de error.
  */
-double get_disk_io_read();
+double get_disk_io_read(void);
 
 /**
  * @brief Obtiene el número de bytes escritos en disco desde /proc/diskstats.
@@ -54,7 +54,7 @@ double get_disk_io_read();
  *
  * @return Número de bytes escritos, o -1 en caso de error.
  */
-double get_disk_io_write();
+double get_disk_io_write(void);
 
 /**
  * @brief Obtiene las estadísticas de red desde /proc/net/dev.
@@ -76,7 +76,7 @@ int get_network_stats(unsigned long long* rx_bytes, unsigned long long* tx_bytes
  *
  * @return Número de procesos en ejecución, o -1 en caso de error.
  */
-double get_process_count();
+double get_process_count(void);
 
 /**
  * @brief Obtiene el número de cambios de contexto desde /proc/stat.
@@ -86,4 +86,4 @@ double get_process_count();
  *
  * @return Número de cambios de contexto, o -1 en caso de error.
  */
-double get_context_switches();
+double get_context_switches(void);

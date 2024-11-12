@@ -93,7 +93,6 @@ void* expose_metrics(void* arg)
     struct MHD_Daemon* daemon = promhttp_start_daemon(MHD_USE_SELECT_INTERNALLY, 8000, NULL, NULL);
     if (daemon == NULL)
     {
-        fprintf(stderr, "Error al iniciar el servidor HTTP\n");
         return NULL;
     }
 

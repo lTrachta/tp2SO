@@ -1,7 +1,7 @@
 # Variables
 CC = gcc
-CFLAGS = -Iinclude -I/usr/local/include -Wall -Wextra
-LDFLAGS = -L/usr/local/lib -lpromhttp -lprom
+CFLAGS = -Iinclude -I/usr/local/include -I/usr/include/cjson -Wall -Wextra
+LDFLAGS = -L/usr/local/lib -L/lib/x86_64-linux-gnu -lpromhttp -lprom -lcjson
 
 SRC_FOLDER = ./src
 OBJ_FOLDER = ./obj
@@ -10,6 +10,7 @@ INCLUDE_FOLDER = ./include
 # Archivos fuente
 SOURCES = $(SRC_FOLDER)/main.c \
            $(SRC_FOLDER)/metrics.c \
+		   $(SRC_FOLDER)/getinfojson.c \
            $(SRC_FOLDER)/expose_metrics.c
 
 # Archivos objeto

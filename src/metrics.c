@@ -1,4 +1,4 @@
-#include "metrics.h"
+#include "../include/metrics.h"
 #include <stdio.h>
 #include <stdlib.h> // Para perror
 #include <string.h> // Para strcmp
